@@ -5,8 +5,17 @@ import EducationIcon from "@/src/assets/icons/graduation-cap.svg";
 import BlogCard from "@/src/components/common/blogCard";
 import LeftCircleIcon from "@/src/assets/icons/angle-circle-left.svg";
 import Pagination from "@/src/components/ui/pagination";
+import fetcher from "@/src/api/fetcher";
+import ENDPOINTS_PATH from "@/src/constants/endpointsPath";
+import postsResponseMapper from "@/src/utils/postsResponseMapper";
 
-const Archive = () => {
+const Archive = async () => {
+	const response = await fetcher(ENDPOINTS_PATH.post);
+	const data = await response.json();
+	const mappedList = postsResponseMapper(data);
+
+	console.log({ mappedList });
+
 	return (
 		<div>
 			<Container>

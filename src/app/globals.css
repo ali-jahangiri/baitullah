@@ -17,3 +17,12 @@
 body {
 	background-color: white;
 }
+
+#archive-content-wrapper blockquote {
+	background-color: red;
+}
+
+#archive-content-wrapper figure img {
+	@apply rounded-md;
+	@apply my-3;
+}
