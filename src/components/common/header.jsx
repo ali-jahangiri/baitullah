@@ -7,7 +7,7 @@ import CartLogo from "@/src/assets/icons/shopping-cart.svg";
 
 const Header = () => {
 	return (
-		<nav className="flex h-20 px-5">
+		<nav className="flex h-24 px-5">
 			<div className="flex space-x-reverse space-x-11 h-full items-center font-bold">
 				{NAVIGATION_ITEMS.map((item, i) => (
 					<Link href={`/${item.path}`} className="" key={i}>

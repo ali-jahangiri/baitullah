@@ -1,36 +1,32 @@
 import CampaignCard from "@/src/components/common/campaignCard";
-import CampaignSearchBar from "@/src/components/page/campaigns/searchBar";
 import Container from "@/src/components/ui/container";
 import Pagination from "@/src/components/ui/pagination";
-import React from "react";
+import ENDPOINTS_PATH from "@/src/constants/endpointsPath";
+import fetcher from "@/src/api/fetcher";
+import campaignsResponseMapper from "@/src/utils/campaignsResponseMapper";
 
-const Campaign = () => {
+const Campaign = async () => {
+	const response = await fetcher(ENDPOINTS_PATH.campaign);
+	const data = await response.json();
+	const mappedSoundsList = campaignsResponseMapper(data);
+
 	return (
 		<div>
 			<div
 				style={{
-					background:
-						"transparent linear-gradient(180deg, #1C6FCC0A 0%, #1C6FCC05 51%, #1C6FCC0A 100%) 0% 0% no-repeat padding-box;",
+					background: "#F9FBFD 0% 0% no-repeat padding-box;",
 				}}
 				className="m-6 rounded-lg"
 			>
 				<Container>
-					<div className="mx-auto my-10 pt-12">
-						<CampaignSearchBar />
-					</div>
-					<div className="grid grid-cols-4 gap-3">
-						{new Array(20).fill("").map((_, i) => (
+					<div className="grid grid-cols-4 gap-3 pt-10">
+						{mappedSoundsList.map((campaign, i) => (
 							<CampaignCard
-								totalShare={500}
-								eachSharePrice={5000}
-								remainShare={259}
-								audience={{
-									name: "علی",
-									age: 15,
-									city: "تهران",
-									needDesc:
-										"فاطمه زهرا عاشق دوچرخه‌سواری است و همیشه دوست داشته یک دوچرخه نو داشته باشد تا بتواند با دوستانش در پارک محله بازی کند.",
-								}}
+								title={campaign.title}
+								img={campaign.img}
+								id={campaign.id}
+								desc={campaign.shortDesc}
+								key={i}
 							/>
 						))}
 					</div>

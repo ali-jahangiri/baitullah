@@ -14,8 +14,6 @@ const Archive = async () => {
 	const data = await response.json();
 	const mappedList = postsResponseMapper(data);
 
-	console.log({ mappedList });
-
 	return (
 		<div>
 			<Container>
@@ -63,12 +61,13 @@ const Archive = async () => {
 					</div>
 
 					<div className="grid grid-cols-4 gap-4 mt-10">
-						{new Array(8).fill("").map((_, i) => (
+						{mappedList.map((post, i) => (
 							<div className="">
 								<BlogCard
-									title="چگونه از فرصت‌های معنوی ماه‌های مبارک بهره ببریم؟"
+									title={post.title}
 									date="8 خرداد"
-									id={Date.now()}
+									img={post.thumbnail}
+									id={post.id}
 									key={i}
 								/>
 							</div>

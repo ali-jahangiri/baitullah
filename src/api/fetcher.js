@@ -1,10 +1,10 @@
-const baseApiURL = process.env.BASE_API_URL;
-const baseApiVersion = process.env.BASE_API_VERSION;
+const baseApiURL = process.env.BASE_URL;
+const baseApiVersion = process.env.BASE_URL_VERSION;
+
+console.log(baseApiURL);
 
 export default function fetcher(route, method = "GET", body = null) {
 	const url = `${baseApiURL}/v${baseApiVersion}/${route}`;
-
-	console.log({ url });
 
 	const headers = {
 		"Content-Type": "application/json",

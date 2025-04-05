@@ -19,10 +19,26 @@ body {
 }
 
 #archive-content-wrapper blockquote {
-	background-color: red;
+	background-color: #f5f9fd;
+	@apply px-5 py-16 rounded-2xl my-5 relative;
+}
+
+#archive-content-wrapper blockquote::before,
+#archive-content-wrapper blockquote::after {
+	content: "''";
+	color: #daeafa;
+	font-size: 10rem;
+	@apply absolute;
+}
+
+#archive-content-wrapper blockquote::before {
+	top: 70px;
+}
+
+#archive-content-wrapper blockquote::after {
+	@apply left-[20px] bottom-[-40px];
 }
 
 #archive-content-wrapper figure img {
-	@apply rounded-md;
-	@apply my-3;
+	@apply rounded-md my-3 mx-auto;
 }

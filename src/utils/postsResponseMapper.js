@@ -5,5 +5,7 @@ export default function postsResponseMapper(responseList = []) {
 		title: response.title.rendered,
 		content: response.content.rendered,
 		shortDesc: response.acf_fields.short_description,
+		thumbnail: response.acf_fields.poster_thumbnail,
+		widePosterImage: response.acf_fields.poster_wide,
 	}));
 }
