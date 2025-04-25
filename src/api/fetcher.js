@@ -1,5 +1,5 @@
-const baseApiURL = process.env.BASE_URL;
-const baseApiVersion = process.env.BASE_URL_VERSION;
+const baseApiURL = process.env.BASE_API_URL;
+const baseApiVersion = process.env.BASE_API_VERSION;
 
 console.log(baseApiURL);
 

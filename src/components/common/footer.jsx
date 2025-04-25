@@ -1,6 +1,9 @@
-import { FOOTER_USEFUL_LINKS } from "@/src/constants/general";
-import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+import Republic from "@/src/assets/images/iran-republic.png";
+import { FOOTER_USEFUL_LINKS } from "@/src/constants/general";
 import Container from "../ui/container";
 
 const Footer = () => {
@@ -10,8 +13,7 @@ const Footer = () => {
 				<div className="flex text-sm h-[225px]">
 					{/* intro */}
 					<div className="flex w-5/12 pl-20">
-						{/* image of akhond */}
-						<div className="block w-32 h-56 bg-gray-600"></div>
+						<Image className="object-contain" src={Republic} />
 
 						<div className="mr-5">
 							<p className="text-secondary">مسجد؛ خانه امید و محور اتحاد</p>

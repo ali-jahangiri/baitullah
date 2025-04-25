@@ -10,6 +10,8 @@ const Sounds = async () => {
 	const data = await response.json();
 	const mappedSoundsList = soundsResponseMapper(data);
 
+	console.log(mappedSoundsList);
+
 	return (
 		<div>
 			<Container
@@ -19,7 +21,7 @@ const Sounds = async () => {
 				}}
 			>
 				<div className="grid grid-cols-4 gap-4 mt-10 p-5">
-					{[...mappedSoundsList, ...mappedSoundsList, ...mappedSoundsList].map((sound, i) => (
+					{mappedSoundsList.map((sound, i) => (
 						<SoundCard id={sound.id} img={""} onPlay={() => {}} title={sound.title} key={i} />
 					))}
 				</div>

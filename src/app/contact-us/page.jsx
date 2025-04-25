@@ -7,11 +7,20 @@ import PhoneIcon from "@/src/assets/icons/phone-call.svg";
 import EmailIcon from "@/src/assets/icons/envelope.svg";
 import CommentIcon from "@/src/assets/icons/comments.svg";
 import GeneralQA from "@/src/components/common/generalQA";
+import HeroBackgroundImage from "@/src/assets/images/contact-us-hero-image.png";
 
 const ContactUs = () => {
 	return (
 		<div className="p-5">
-			<div className="w-full h-[40rem] bg-gray-800 rounded-3xl relative">
+			<div
+				style={{
+					background: `url(${HeroBackgroundImage.src})`,
+					backgroundRepeat: "no-repeat",
+					backgroundSize: "cover",
+					backgroundPosition: "center center",
+				}}
+				className="w-full h-[40rem] rounded-3xl relative"
+			>
 				<div className="absolute top-1/2 left-0 bg-white text-2xl p-5">
 					<h1 className="text-primary font-bold">درباره ما بیشتر بدانید</h1>
 					<p className="text-gray-500 mt-1">ما چی ارائه میدیم</p>
@@ -25,7 +34,7 @@ const ContactUs = () => {
 				]}
 			>
 				<Container>
-					<div className="flex gap-10">
+					<div className="flex gap-10 w-4/5 mx-auto">
 						<div className="w-2/5">
 							<div className="w-full bg-white rounded-lg -mt-24 pt-16 px-5 pb-5">
 								<div className="flex items-center justify-between rounded-3xl shadow-2xl p-3">
@@ -62,7 +71,7 @@ const ContactUs = () => {
 						</div>
 
 						<div className="w-3/5">
-							<p className="leading-10 text-gray-400 mt-5">
+							<p className="leading-10 text-gray-400 mt-10">
 								مسجد در اسلام جایگاهی ویژه دارد و نه تنها به عنوان مکانی برای نماز و عبادت
 								شناخته می‌شود، بلکه به عنوان یک مرکز اجتماعی، فرهنگی و آموزشی نیز ایفای نقش
 								می‌کند. مسجد در واقع خانه خداوند است و مسلمانان برای ارتباط با پروردگار خود

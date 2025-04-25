@@ -14,6 +14,8 @@ const Archive = async () => {
 	const data = await response.json();
 	const mappedList = postsResponseMapper(data);
 
+	console.log(data);
+
 	return (
 		<div>
 			<Container>

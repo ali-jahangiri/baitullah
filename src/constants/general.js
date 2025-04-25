@@ -1,9 +1,5 @@
 export const NAVIGATION_ITEMS = [
 	{
-		label: "صفحه نخست",
-		path: "",
-	},
-	{
 		label: "رویداد ها",
 		path: "events",
 	},

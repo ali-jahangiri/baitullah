@@ -47,7 +47,7 @@ const FAQ = () => {
 						<GeneralQA />
 					</div>
 
-					<div className="flex gap-10 my-52">
+					{/* <div className="flex gap-10 my-52">
 						<div className="w-1/2">
 							<p className="text-lg text-primary">
 								به پیام شما در سریع ترین زمان ممکن پاسخ خواهیم داد
@@ -65,7 +65,7 @@ const FAQ = () => {
 							</Button>
 						</div>
 						<div className="h-[30rem] bg-gray-800 w-1/2"></div>
-					</div>
+					</div> */}
 				</Container>
 			</GradientBackground>
 		</div>
