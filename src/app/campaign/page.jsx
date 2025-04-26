@@ -12,14 +12,9 @@ const Campaign = async () => {
 
 	return (
 		<div>
-			<div
-				style={{
-					background: "#F9FBFD 0% 0% no-repeat padding-box;",
-				}}
-				className="m-6 rounded-lg"
-			>
-				<Container>
-					<div className="grid grid-cols-4 gap-3 pt-10">
+			<div className="">
+				<Container className="bg-[#F9FBFD] rounded-lg px-10 py-10">
+					<div className="grid grid-cols-4 gap-3">
 						{mappedSoundsList.map((campaign, i) => (
 							<CampaignCard
 								title={campaign.title}

@@ -42,3 +42,11 @@ body {
 #archive-content-wrapper figure img {
 	@apply rounded-md my-3 mx-auto;
 }
+
+.audio-payer-package svg path {
+	fill: white !important;
+}
+
+.audio-payer-package .rhap_time {
+	color: white;
+}

@@ -8,7 +8,7 @@ import Container from "../ui/container";
 
 const Footer = () => {
 	return (
-		<footer>
+		<footer className="pt-20">
 			<Container>
 				<div className="flex text-sm h-[225px]">
 					{/* intro */}

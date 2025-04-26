@@ -4,7 +4,7 @@ import Header from "../components/common/header";
 import Footer from "../components/common/footer";
 import "./globals.css";
 
-const vazirFont = localFont({ src: "../assets/fonts/Vazir.woff2" });
+const vazirFont = localFont({ src: "../assets/fonts/Dana-Regular.woff2" });
 
 export const metadata = {
 	title: "Create Next App",

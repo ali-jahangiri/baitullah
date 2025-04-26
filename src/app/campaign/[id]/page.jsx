@@ -50,7 +50,10 @@ const CampaignDetails = async ({ params }) => {
 								{mappedCampaignDetails.shortDesc}
 							</p>
 
-							<CampaignActionBox price={Number(mappedCampaignDetails.amount)} />
+							<CampaignActionBox
+								actionLabel={mappedCampaignDetails.actionLabel}
+								price={Number(mappedCampaignDetails.amount)}
+							/>
 						</div>
 					</div>
 					<div className="flex">

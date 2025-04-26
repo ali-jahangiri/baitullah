@@ -67,6 +67,7 @@ const Archive = async () => {
 							<div className="">
 								<BlogCard
 									title={post.title}
+									pathSource="archive"
 									date="8 خرداد"
 									img={post.thumbnail}
 									id={post.id}

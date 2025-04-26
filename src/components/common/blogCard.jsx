@@ -3,9 +3,9 @@ import React from "react";
 import LeftCircleIcon from "@/src/assets/icons/angle-circle-left.svg";
 import Link from "next/link";
 
-const BlogCard = ({ img, date, title, id }) => (
+const BlogCard = ({ img, date, title, id, pathSource }) => (
 	<Link
-		href={`/archive/${id}`}
+		href={`/${pathSource}/${id}`}
 		className="flex h-[30rem] relative bg-center bg-no-repeat bg-cover rounded-3xl"
 		style={{ backgroundImage: `url(${img})` }}
 	>
