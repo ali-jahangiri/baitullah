@@ -114,3 +114,8 @@ export const GENERAL_QA_LIST = [
 		],
 	},
 ];
+
+export const SOUND_TYPE_ENUMS = {
+	spech: "سخنرانی",
+	podcast: "پادکست",
+};

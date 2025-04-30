@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import Header from "../components/common/header";
 import Footer from "../components/common/footer";
 import "./globals.css";
+import "./slick-slider.css";
 
 const vazirFont = localFont({ src: "../assets/fonts/Dana-Regular.woff2" });
 

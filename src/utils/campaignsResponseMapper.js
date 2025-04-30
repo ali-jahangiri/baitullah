@@ -4,6 +4,8 @@ export default function campaignsResponseMapper(campaigns) {
 		title: campaign.title.rendered,
 		shortDesc: campaign.acf_fields.short_description,
 		img: campaign.acf_fields.poster,
+		startDate: campaign.acf_fields.start_date,
+		endDate: campaign.acf_fields.end_date,
 		type: campaign.event,
 		createdAt: campaign.date,
 		desc: campaign.acf_fields.description,

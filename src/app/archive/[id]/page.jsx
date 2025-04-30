@@ -66,7 +66,7 @@ const Page = async ({ params }) => {
 							"transparent linear-gradient(180deg, #1C6FCC0A 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;",
 					}}
 				>
-					<div className="w-8/12 mr-auto">
+					{/* <div className="w-8/12 mr-auto">
 						{new Array(8).fill("").map((_, i) => (
 							<Comment
 								name="علی جهانگیری"
@@ -76,7 +76,7 @@ const Page = async ({ params }) => {
 								key={i}
 							/>
 						))}
-					</div>
+					</div> */}
 				</div>
 			</Container>
 		</div>

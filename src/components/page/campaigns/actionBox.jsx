@@ -3,9 +3,9 @@ import React from "react";
 import LeftIcon from "../../../assets/icons/angle-left.svg";
 import WalkingIcon from "@/src/assets/icons/walking.svg";
 
-const CampaignActionBox = ({ price, actionLabel }) => {
+const CampaignActionBox = ({ price, actionLabel, startDate, endDate }) => {
 	return (
-		<div className="mt-10 p-5 bg-white">
+		<div className="mt-10 p-5 bg-white rounded-xl">
 			<div className="flex items-center justify-between rounded-md p-4 bg-[#F5F9FD]">
 				<p>مبلغ ورودی به ازای هر فرد:</p>
 				<div className="flex items-center">
@@ -14,23 +14,25 @@ const CampaignActionBox = ({ price, actionLabel }) => {
 				</div>
 			</div>
 
-			<div className="flex items-center rounded-xl border border-[#EDEDED] mt-10 p-2">
-				<div className="flex items-center w-full justify-center">
-					<WalkingIcon className="w-8 h-8 fill-primary scale-x-[-1]" />
-					<div className="mr-5">
-						<p className="text-[#8B8B8B] text-sm mb-2">تاریخ ورود</p>
-						<span className="text-[#3D3C45] text-lg">1402/04/12</span>
+			{startDate && endDate && (
+				<div className="flex items-center rounded-xl border border-[#EDEDED] mt-10 p-2">
+					<div className="flex items-center w-full justify-center">
+						<WalkingIcon className="w-8 h-8 fill-primary scale-x-[-1]" />
+						<div className="mr-5">
+							<p className="text-[#8B8B8B] text-sm mb-2">تاریخ ورود</p>
+							<span className="text-[#3D3C45] text-lg">{startDate}</span>
+						</div>
+					</div>
+					<div className="h-12 my-auto w-1 bg-[#EDEDED]" />
+					<div className="flex items-center w-full justify-center">
+						<WalkingIcon className="w-8 h-8 fill-gray-400" />
+						<div className="mr-5">
+							<p className="text-[#8B8B8B] text-sm mb-2">تاریخ خروج</p>
+							<span className="text-[#3D3C45] text-lg">{endDate}</span>
+						</div>
 					</div>
 				</div>
-				<div className="h-12 my-auto w-1 bg-[#EDEDED]" />
-				<div className="flex items-center w-full justify-center">
-					<WalkingIcon className="w-8 h-8 fill-gray-400" />
-					<div className="mr-5">
-						<p className="text-[#8B8B8B] text-sm mb-2">تاریخ خروج</p>
-						<span className="text-[#3D3C45] text-lg">1402/04/12</span>
-					</div>
-				</div>
-			</div>
+			)}
 
 			<div className="flex items-center justify-between mt-8">
 				<div>

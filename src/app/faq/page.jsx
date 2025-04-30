@@ -1,29 +1,33 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 import GeneralQA from "@/src/components/common/generalQA";
 import Container from "@/src/components/ui/container";
-import GradientBackground from "@/src/components/ui/gradientBackground";
 import TextInput from "@/src/components/ui/textInput";
-import Textarea from "@/src/components/ui/textarea";
-import Button from "@/src/components/ui/button";
+import BlurEffectBackground from "@/src/components/ui/blurEffectBackground";
 import SupportIcon from "@/src/assets/icons/user-headset.svg";
 import QuestionIcon from "@/src/assets/icons/question.svg";
-import LeftArrowIcon from "@/src/assets/icons/angle-left.svg";
-import Shade from "@/src/assets/images/shade.png";
+// import GradientBackground from "@/src/components/ui/gradientBackground";
+// import Textarea from "@/src/components/ui/textarea";
+// import Button from "@/src/components/ui/button";
+// import LeftArrowIcon from "@/src/assets/icons/angle-left.svg";
 
 const FAQ = () => {
+	const [searchValue, setSearchValue] = useState("");
+
 	return (
-		<div style={{ background: `url(${Shade.src})` }}>
+		<div>
+			<BlurEffectBackground />
+
 			<Container>
 				<h2 className="text-center text-gray-800 pt-20">
 					پیش از طرح پرسش، جستجو کنید! شاید پاسخ خود را بیابید.
 				</h2>
 
-				<div className="flex items-center w-3/6 mx-auto mt-8">
+				<div className="flex items-center w-3/6 mx-auto mt-8 bg-white">
 					<TextInput
+						value={searchValue}
 						containerClassName="w-full"
-						placeholder=""
 						renderBefore={() => (
 							<div className="flex items-center justify-center p-1">
 								<QuestionIcon className="w-5 h-5 fill-secondary" />
@@ -36,10 +40,11 @@ const FAQ = () => {
 								ارتباط با پشتیبانی
 							</button>
 						)}
+						onChange={setSearchValue}
 					/>
 				</div>
 				<div className="w-4/5 mx-auto mt-20">
-					<GeneralQA />
+					<GeneralQA searchValue={searchValue} />
 				</div>
 
 				{/* <div className="flex gap-10 my-52">
