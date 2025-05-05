@@ -13,7 +13,7 @@ const Footer = () => {
 				<div className="flex text-sm h-[225px]">
 					{/* intro */}
 					<div className="flex w-5/12 pl-20">
-						<Image className="object-contain" src={Republic} />
+						<Image className="object-contain" alt="default" src={Republic} />
 
 						<div className="mr-5">
 							<p className="text-secondary">مسجد؛ خانه امید و محور اتحاد</p>

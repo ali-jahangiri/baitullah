@@ -37,7 +37,7 @@ const CampaignActionBox = ({ price, actionLabel, startDate, endDate }) => {
 			<div className="flex items-center justify-between mt-8">
 				<div>
 					<p className="text-[#ABB5C6]">ظرفیت باقی مانده</p>
-					<p className="text-[#3D3C45] font-bold text-lg">3 نفر</p>
+					<p className="text-[#3D3C45] font-bold text-lg">نا مشخص</p>
 				</div>
 
 				<button className="flex items-center justify-between rounded-3xl bg-primary text-white p-3 px-4">

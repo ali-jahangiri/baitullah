@@ -24,9 +24,11 @@ const CampaignDetails = async ({ params }) => {
 			<Container>
 				<div className="w-full flex gap-10">
 					<div className="w-7/12">
-						<img
+						<Image
 							src={mappedCampaignDetails.img}
-							alt="poster"
+							alt="poster-cover"
+							width={800}
+							height={800}
 							className="w-full rounded-2xl"
 						/>
 					</div>
