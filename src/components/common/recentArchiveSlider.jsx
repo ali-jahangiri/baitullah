@@ -1,25 +1,42 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-import BoyImage from "@/src/assets/images/boy.png";
-import BgImage from "@/src/assets/images/recent-arc-bg.png";
-import BgEffect from "@/src/assets/images/recent-arc-bg-effect.png";
-import LeftArrowIcon from "@/src/assets/icons/angle-left.svg";
 import Slider from "react-slick";
 
+import fetcher from "@/src/api/fetcher";
+import ENDPOINTS_PATH from "@/src/constants/endpointsPath";
+import postsResponseMapper from "@/src/utils/postsResponseMapper";
+import BoyImage from "@/src/assets/images/boy.png";
+import BgImage from "@/src/assets/images/recent-arc-bg.png";
+import LeftArrowIcon from "@/src/assets/icons/angle-left.svg";
+import BgEffect from "@/src/assets/images/recent-arc-bg-effect.png";
+import LeftIcon from "@/src/assets/icons/angle-left.svg";
+
 const RecentArchiveSlider = () => {
+	const [archivePost, setArchivePost] = useState([]);
+
 	const sliderConfig = {
 		dots: true,
-		infinite: true,
+		infinite: false,
 		speed: 500,
-		slidesToShow: 1,
+		dots: false,
+		arrows: false,
+		slidesToShow: 2.5,
 		slidesToScroll: 1,
+		dir: "rtl",
 	};
 
+	useEffect(() => {
+		fetcher(ENDPOINTS_PATH.post)
+			.then(res => res.json())
+			.then(postsResponseMapper)
+			.then(data => setArchivePost([...data, ...data, ...data, ...data]));
+	}, []);
+
 	return (
-		<div className="flex w-[98%] mx-auto h-[30rem] relative mt-32">
+		<div id="archive-slider" className="flex w-full pb-32 mb-44 h-[30rem] relative mt-32">
 			<div
 				className="w-full h-full absolute -z-10 rounded-xl"
 				style={{
@@ -40,7 +57,7 @@ const RecentArchiveSlider = () => {
 			{/* slider and helper text container */}
 
 			<div className="w-4/6 relative p-14 z-10">
-				<div className="flex items-center justify-between">
+				<div className="flex items-center justify-between mb-20">
 					<p className="text-lg">آخرین اخبار و مقالات بیت الله</p>
 					<Link className="flex items-center text-gray-500" href="/archive">
 						مشاهده همه
@@ -48,26 +65,33 @@ const RecentArchiveSlider = () => {
 					</Link>
 				</div>
 
-				<Slider {...sliderConfig}>
-					<div>
-						<h3>1</h3>
-					</div>
-					<div>
-						<h3>2</h3>
-					</div>
-					<div>
-						<h3>3</h3>
-					</div>
-					<div>
-						<h3>4</h3>
-					</div>
-					<div>
-						<h3>5</h3>
-					</div>
-					<div>
-						<h3>6</h3>
-					</div>
-				</Slider>
+				<div dir="ltr" className="-mr-36">
+					<Slider {...sliderConfig}>
+						{archivePost.map((post, i) => (
+							<div dir="rtl" className="bg-white rounded-xl p-2 pb-5 text-right" key={i}>
+								<Image
+									className="w-full rounded-lg"
+									src={post.thumbnail}
+									alt="post"
+									width={300}
+									height={600}
+								/>
+								<p className="mt-4">{post.title}</p>
+								<p className="text-sm mb-6 text-gray-400 mt-3 overflow-hidden line-clamp-2">
+									{post.shortDesc}
+								</p>
+
+								<Link
+									className="flex items-center justify-end text-primary font-bold text-base"
+									href={`/archive/${post.id}`}
+								>
+									مطالعه
+									<LeftIcon className="w-3 h-3 fill-primary mr-3" />
+								</Link>
+							</div>
+						))}
+					</Slider>
+				</div>
 			</div>
 
 			{/* boy image container */}

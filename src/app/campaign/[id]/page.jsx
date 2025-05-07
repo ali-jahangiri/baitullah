@@ -1,18 +1,15 @@
+import Image from "next/image";
 import fetcher from "@/src/api/fetcher";
 import Container from "@/src/components/ui/container";
 import ENDPOINTS_PATH from "@/src/constants/endpointsPath";
 import campaignsResponseMapper from "@/src/utils/campaignsResponseMapper";
-import GradientBackground from "@/src/components/ui/gradientBackground";
 import CampaignActionBox from "@/src/components/page/campaigns/actionBox";
 import BlurEffectBackground from "@/src/components/ui/blurEffectBackground";
 import MapImage from "@/src/assets/images/map.png";
-import LeftArrowIcon from "@/src/assets/icons/angle-left.svg";
 import FlagIcon from "@/src/assets/icons/flag.svg";
-import Image from "next/image";
 
 const CampaignDetails = async ({ params }) => {
 	const { id: campaignId } = await params;
-
 	const response = await fetcher(`${ENDPOINTS_PATH.campaign}/${campaignId}`);
 	const data = await response.json();
 

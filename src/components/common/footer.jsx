@@ -71,9 +71,13 @@ const Footer = () => {
 								تهران، خیابان انقلاب، کوچه مسجد، پلاک 12
 							</span>
 							<p>تلفن:</p>
-							<span className="text-gray-400 mt-1 mb-4">021-12345678</span>
+							<a href="tel:021-77477372" className="text-gray-400 mt-1 mb-4">
+								021-12345678
+							</a>
 							<p>ایمیل:</p>
-							<span className="text-gray-400 mt-1 mb-4">info@masjedexample.com</span>
+							<a href="mailto:mr.abedini@gmail.com" className="text-gray-400 mt-1 mb-4">
+								info@masjedexample.com
+							</a>
 						</div>
 					</div>
 				</div>

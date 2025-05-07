@@ -18,8 +18,6 @@ const Sounds = async () => {
 	const data = await response.json();
 	const soundList = soundsResponseMapper(data);
 
-	console.log(soundList);
-
 	const firstSoundItem = soundList[0];
 
 	return (
