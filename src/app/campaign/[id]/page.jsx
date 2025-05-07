@@ -6,7 +6,7 @@ import campaignsResponseMapper from "@/src/utils/campaignsResponseMapper";
 import CampaignActionBox from "@/src/components/page/campaigns/actionBox";
 import BlurEffectBackground from "@/src/components/ui/blurEffectBackground";
 import MapImage from "@/src/assets/images/map.png";
-import FlagIcon from "@/src/assets/icons/flag.svg";
+import { Flag } from "@/src/assets/icons";
 
 const CampaignDetails = async ({ params }) => {
 	const { id: campaignId } = await params;
@@ -63,7 +63,7 @@ const CampaignDetails = async ({ params }) => {
 				<div className="flex flex-col">
 					<div className="mt-20 flex items-center justify-center">
 						<div>
-							<FlagIcon className="w-4 h-4 fill-primary ml-2" />
+							<Flag className="w-4 h-4 fill-primary ml-2" />
 						</div>
 						<p>موقعیت روی نقشه</p>
 					</div>

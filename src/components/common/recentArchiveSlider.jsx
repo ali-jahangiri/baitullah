@@ -10,9 +10,8 @@ import ENDPOINTS_PATH from "@/src/constants/endpointsPath";
 import postsResponseMapper from "@/src/utils/postsResponseMapper";
 import BoyImage from "@/src/assets/images/boy.png";
 import BgImage from "@/src/assets/images/recent-arc-bg.png";
-import LeftArrowIcon from "@/src/assets/icons/angle-left.svg";
 import BgEffect from "@/src/assets/images/recent-arc-bg-effect.png";
-import LeftIcon from "@/src/assets/icons/angle-left.svg";
+import { AngleLeft } from "@/src/assets/icons";
 
 const RecentArchiveSlider = () => {
 	const [archivePost, setArchivePost] = useState([]);
@@ -61,7 +60,7 @@ const RecentArchiveSlider = () => {
 					<p className="text-lg">آخرین اخبار و مقالات بیت الله</p>
 					<Link className="flex items-center text-gray-500" href="/archive">
 						مشاهده همه
-						<LeftArrowIcon className="w-3 h-3 mr-3 fill-gray-500" />
+						<AngleLeft className="w-3 h-3 mr-3 fill-gray-500" />
 					</Link>
 				</div>
 
@@ -86,7 +85,7 @@ const RecentArchiveSlider = () => {
 									href={`/archive/${post.id}`}
 								>
 									مطالعه
-									<LeftIcon className="w-3 h-3 fill-primary mr-3" />
+									<AngleLeft className="w-3 h-3 fill-primary mr-3" />
 								</Link>
 							</div>
 						))}

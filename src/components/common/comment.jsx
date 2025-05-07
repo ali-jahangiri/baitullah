@@ -1,10 +1,10 @@
-import UserLogo from "@/src/assets/icons/user.svg";
+import { User } from "@/src/assets/icons";
 
 const Comment = ({ avatar, time, name, content, showBorder }) => (
 	<div className={`mt-1 p-5`}>
 		<div className="flex items-center">
 			<div className="flex items-center justify-center rounded-full bg-white w-10 h-10 ml-3 shrink-0">
-				<UserLogo className="w-5 h-5 fill-gray-500" />
+				<User className="w-5 h-5 fill-gray-500" />
 			</div>
 			<div>
 				<p className="text-base text-gray-500">{name}</p>

@@ -5,8 +5,8 @@ import Image from "next/image";
 
 import FixedAudioPlayer from "./fixedAudioPlayer";
 import SoundWaveImage from "@/src/assets/images/sound-wave.png";
-import PlayIcon from "@/src/assets/icons/play.svg";
 import soundDurationSeparator from "@/src/utils/soundDurationSeparator";
+import { Play } from "@/src/assets/icons";
 
 const SoundCard = ({ id, duration, title, img, onSelect }) => {
 	const [wasPlayerOpen, setWasPlayerOpen] = useState(false);
@@ -36,7 +36,7 @@ const SoundCard = ({ id, duration, title, img, onSelect }) => {
 					className="rounded-full bg-primary w-8 h-8 flex items-center justify-center shrink-0 cursor-pointer select-none"
 					onClick={() => onSelect()}
 				>
-					<PlayIcon className="w-3 h-3 fill-white" />
+					<Play className="w-3 h-3 fill-white" />
 				</div>
 			</div>
 		</div>

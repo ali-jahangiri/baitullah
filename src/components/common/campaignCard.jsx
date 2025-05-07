@@ -1,4 +1,5 @@
-import LeftArrowIcon from "@/src/assets/icons/angle-left.svg";
+import { AngleLeft } from "@/src/assets/icons";
+
 import Link from "next/link";
 
 const CampaignCard = ({ id, img, title, desc }) => (
@@ -11,7 +12,7 @@ const CampaignCard = ({ id, img, title, desc }) => (
 			className="flex items-center justify-center bg-[#F3F7FE] text-sm rounded-lg p-3 text-primary mx-auto my-4 w-full mt-auto"
 		>
 			<span className="ml-3">مشاهده</span>
-			<LeftArrowIcon className="w-3 h-3 fill-primary" />
+			<AngleLeft className="w-3 h-3 fill-primary" />
 		</Link>
 	</div>
 );

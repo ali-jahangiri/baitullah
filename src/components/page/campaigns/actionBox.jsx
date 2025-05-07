@@ -1,7 +1,6 @@
 import React from "react";
 
-import LeftIcon from "../../../assets/icons/angle-left.svg";
-import WalkingIcon from "@/src/assets/icons/walking.svg";
+import { AngleLeft, Walking } from "@/src/assets/icons";
 
 const CampaignActionBox = ({ price, actionLabel, startDate, endDate }) => {
 	return (
@@ -17,7 +16,7 @@ const CampaignActionBox = ({ price, actionLabel, startDate, endDate }) => {
 			{startDate && endDate && (
 				<div className="flex items-center rounded-xl border border-[#EDEDED] mt-10 p-2">
 					<div className="flex items-center w-full justify-center">
-						<WalkingIcon className="w-8 h-8 fill-primary scale-x-[-1]" />
+						<Walking className="w-8 h-8 fill-primary scale-x-[-1]" />
 						<div className="mr-5">
 							<p className="text-[#8B8B8B] text-sm mb-2">تاریخ ورود</p>
 							<span className="text-[#3D3C45] text-lg">{startDate}</span>
@@ -43,7 +42,7 @@ const CampaignActionBox = ({ price, actionLabel, startDate, endDate }) => {
 				<button className="flex items-center justify-between rounded-3xl bg-primary text-white p-3 px-4">
 					{actionLabel}
 
-					<LeftIcon className="w-4 h-4 mr-12 fill-white" />
+					<AngleLeft className="w-4 h-4 mr-12 fill-white" />
 				</button>
 			</div>
 		</div>

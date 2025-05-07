@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import { GENERAL_QA_LIST } from "@/src/constants/general";
 
-import LeftIcon from "@/src/assets/icons/angle-left.svg";
 import Collapse from "../ui/collapse";
+import { AngleLeft } from "@/src/assets/icons";
 
 const GeneralQA = ({ searchValue }) => {
 	const [currentActiveCategory, setCurrentActiveCategory] = useState(
@@ -42,7 +42,7 @@ const GeneralQA = ({ searchValue }) => {
 							{category.categoryTitle}
 						</p>
 
-						<LeftIcon className="w-4 h-4" />
+						<AngleLeft className="w-4 h-4" />
 					</div>
 				))}
 			</div>

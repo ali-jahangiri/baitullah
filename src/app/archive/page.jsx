@@ -3,14 +3,13 @@ import Image from "next/image";
 
 import Container from "@/src/components/ui/container";
 
-import EducationIcon from "@/src/assets/icons/graduation-cap.svg";
 import BlogCard from "@/src/components/common/blogCard";
-import LeftCircleIcon from "@/src/assets/icons/angle-circle-left.svg";
 import Pagination from "@/src/components/ui/pagination";
 import BlurEffectBackground from "@/src/components/ui/blurEffectBackground";
 import fetcher from "@/src/api/fetcher";
 import ENDPOINTS_PATH from "@/src/constants/endpointsPath";
 import postsResponseMapper from "@/src/utils/postsResponseMapper";
+import { AngleCircleLeft } from "@/src/assets/icons";
 
 const Archive = async () => {
 	const response = await fetcher(ENDPOINTS_PATH.post);
@@ -25,7 +24,6 @@ const Archive = async () => {
 				<BlurEffectBackground />
 				<div className="w-1/2">
 					<div className="flex">
-						{/* <EducationIcon className="" /> */}
 						<div>
 							<p>اخبار و مقالات</p>
 							<p className="mt-1 text-gray-400">Learning Articles</p>
@@ -49,7 +47,7 @@ const Archive = async () => {
 							className="flex items-center justify-end mt-5"
 						>
 							<p className="text-gray-400 text-sm">مطالعه مقاله</p>
-							<LeftCircleIcon className="w-4 h-4 fill-gray-400 mr-2" />
+							<AngleCircleLeft className="w-4 h-4 fill-gray-400 mr-2" />
 						</Link>
 					</div>
 				</div>

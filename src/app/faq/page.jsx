@@ -5,12 +5,10 @@ import GeneralQA from "@/src/components/common/generalQA";
 import Container from "@/src/components/ui/container";
 import TextInput from "@/src/components/ui/textInput";
 import BlurEffectBackground from "@/src/components/ui/blurEffectBackground";
-import SupportIcon from "@/src/assets/icons/user-headset.svg";
-import QuestionIcon from "@/src/assets/icons/question.svg";
+import { Question, UserHeadset } from "@/src/assets/icons";
 // import GradientBackground from "@/src/components/ui/gradientBackground";
 // import Textarea from "@/src/components/ui/textarea";
 // import Button from "@/src/components/ui/button";
-// import LeftArrowIcon from "@/src/assets/icons/angle-left.svg";
 
 const FAQ = () => {
 	const [searchValue, setSearchValue] = useState("");
@@ -30,13 +28,13 @@ const FAQ = () => {
 						containerClassName="w-full"
 						renderBefore={() => (
 							<div className="flex items-center justify-center p-1">
-								<QuestionIcon className="w-5 h-5 fill-secondary" />
+								<Question className="w-5 h-5 fill-secondary" />
 								<div className="h-10 w-0.5 bg-gray-100 mr-2" />
 							</div>
 						)}
 						renderAfter={() => (
 							<button className="flex items-center justify-center text-sm w-40 bg-gray-100 p-1 h-14 rounded-lg flex-shrink-0">
-								<SupportIcon className="w-55 h-5 fill-green-800" />
+								<UserHeadset className="w-55 h-5 fill-green-800" />
 								ارتباط با پشتیبانی
 							</button>
 						)}

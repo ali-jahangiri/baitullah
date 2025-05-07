@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
-import QuestionIcon from "@/src/assets/icons/question.svg";
-import LeftArrowIcon from "@/src/assets/icons/angle-left.svg";
-import DownArrowIcon from "@/src/assets/icons/angle-small-down.svg";
+import { AngleLeft, AngleSmallDown, Question } from "@/src/assets/icons";
 
 const Collapse = ({ title, content }) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -15,14 +13,14 @@ const Collapse = ({ title, content }) => {
 						!isOpen ? "bg-gray-200" : "bg-secondary"
 					}`}
 				>
-					<QuestionIcon className="w-3 h-3 fill-white" />
+					<Question className="w-3 h-3 fill-white" />
 				</div>
 				<p className="text-gray-700 ml-auto">{title}</p>
 
 				{isOpen ? (
-					<DownArrowIcon className="w-5 h-5 fill-gray-500" />
+					<AngleSmallDown className="w-5 h-5 fill-gray-500" />
 				) : (
-					<LeftArrowIcon className="w-3 h-3 fill-gray-300" />
+					<AngleLeft className="w-3 h-3 fill-gray-300" />
 				)}
 			</div>
 

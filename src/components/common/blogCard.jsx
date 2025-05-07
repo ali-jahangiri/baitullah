@@ -1,7 +1,7 @@
 import React from "react";
 
-import LeftCircleIcon from "@/src/assets/icons/angle-circle-left.svg";
 import Link from "next/link";
+import { AngleCircleLeft } from "@/src/assets/icons";
 
 const BlogCard = ({ img, date, title, id, pathSource, height = 30 }) => (
 	<Link
@@ -12,7 +12,7 @@ const BlogCard = ({ img, date, title, id, pathSource, height = 30 }) => (
 		<div className="flex items-center absolute bottom-5 px-6">
 			<div className="rounded-lg text-sm text-white bg-white/5 ml-1 text-center p-1">{date}</div>
 			<p className="text-sm text-white mx-2">{title}</p>
-			<LeftCircleIcon className="w-6 h-6 fill-gray-300" />
+			<AngleCircleLeft className="w-6 h-6 fill-gray-300" />
 		</div>
 	</Link>
 );

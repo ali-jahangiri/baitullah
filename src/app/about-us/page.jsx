@@ -4,6 +4,7 @@ import BlurEffectBackground from "@/src/components/ui/blurEffectBackground";
 
 import HeroBackgroundImage from "@/src/assets/images/contact-us-hero-image.png";
 import WaysOfContacts from "@/src/components/common/waysOfContacts";
+import { Comments } from "@/src/assets/icons";
 
 const AboutUs = () => (
 	<div className="px-5">
@@ -29,7 +30,7 @@ const AboutUs = () => (
 				<div className="w-2/5 -mt-32">
 					<WaysOfContacts />
 					<div className="flex items-center justify-center mt-6">
-						<CommentIcon className="w-10 h-10 fill-green-800 ml-3" />
+						<Comments className="w-10 h-10 fill-green-800 ml-3" />
 						<div>
 							<p>انتقاد و پیشنهاد</p>
 							<p className="text-gray-400 mt-2">Criticism and Suggestions</p>

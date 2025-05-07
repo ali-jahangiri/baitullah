@@ -1,4 +1,4 @@
-import LeftArrowIcon from "@/src/assets/icons/angle-left.svg";
+import { AngleLeft } from "@/src/assets/icons";
 
 const RelatedPosts = ({ posts = [] }) => {
 	return (
@@ -9,7 +9,7 @@ const RelatedPosts = ({ posts = [] }) => {
 					<div className="flex flex-col">
 						<h2>{post.title}</h2>
 						<p>{post.shortDesc}</p>
-						<LeftArrowIcon />
+						<AngleLeft />
 					</div>
 				</div>
 			))}
