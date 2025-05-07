@@ -17,13 +17,13 @@ const GalleryPost = async ({ params }) => {
 	const fourRecentGalleryItems = await fourRecentGalleryItemResponse.json();
 	const mappedFourRecentGalleryItems = galleryResponseMapper(fourRecentGalleryItems);
 
-	return <CustomLightBox media={mappedGalleryItemDetails.media} />;
-
 	return (
 		<div>
 			<BlurEffectBackground />
 			<Container className="flex">
-				<div className="w-6/12"></div>
+				<div className="w-6/12">
+					<CustomLightBox media={mappedGalleryItemDetails.media} />
+				</div>
 				<div className="w-6/12">
 					<div className="flex items-center">
 						<div></div>
