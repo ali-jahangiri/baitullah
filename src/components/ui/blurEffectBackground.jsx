@@ -1,3 +1,5 @@
+"use client";
+
 import Shade from "@/src/assets/images/shade.png";
 
 const BlurEffectBackground = ({ relativeToParent, baseZIndex, top = 0 }) => (
