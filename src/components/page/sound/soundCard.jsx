@@ -13,7 +13,7 @@ const SoundCard = ({ id, duration, title, img, onSelect }) => {
 
 	return (
 		<div className="p-4 rounded-3xl bg-white">
-			{img ? (
+			{img && (
 				<Image
 					src={img}
 					alt="sound"
@@ -21,8 +21,6 @@ const SoundCard = ({ id, duration, title, img, onSelect }) => {
 					width={500}
 					height={500}
 				/>
-			) : (
-				<div className="w-full rounded-md h-60 bg-gray-500" />
 			)}
 			<div className="flex items-center justify-between mt-4">
 				<p className=" text-sm text-primary">{title}</p>

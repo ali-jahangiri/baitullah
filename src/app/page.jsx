@@ -1,12 +1,14 @@
-import RecentArchiveSlider from "../components/common/recentArchiveSlider";
-import Schedule from "../components/page/home/schedule";
+"use client";
+
 import BlurEffectBackground from "../components/ui/blurEffectBackground";
-import Container from "../components/ui/container";
+import RecentCampaigns from "../components/page/home/recentCampaigns";
 
 export default function Home() {
 	return (
 		<div className="">
 			<BlurEffectBackground />
+			<RecentCampaigns />
+			{/* <RecentSounds /> */}
 			<Container>
 				<p className="font-bold"> بیت الله در یک نگاه</p>
 				<h3 className="leading-7 font-light text-lg mt-3">

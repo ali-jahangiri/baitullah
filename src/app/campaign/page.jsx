@@ -27,9 +27,9 @@ const Campaign = async () => {
 					</div>
 				</Container>
 
-				<div className="w-full flex items-center justify-center mt-12 pb-10">
+				{/* <div className="w-full flex items-center justify-center mt-12 pb-10">
 					<Pagination total={15} current={3} />
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
