@@ -6,47 +6,49 @@ import BlurEffectBackground from "@/src/components/ui/blurEffectBackground";
 import Container from "@/src/components/ui/container";
 import ENDPOINTS_PATH from "@/src/constants/endpointsPath";
 import _date from "@/src/utils/date";
-import { galleryResponseMapper } from "@/src/utils/galleryResponseMapper";
+import { videoResponseMapper } from "@/src/utils/videoResponseMapper";
 
-const GalleryPost = async ({ params }) => {
-	const { id: galleryItemId } = await params;
-	const response = await fetcher(`${ENDPOINTS_PATH.gallery}/${galleryItemId}`);
+const VideoPost = async ({ params }) => {
+	const { id: videoItemId } = await params;
+	const response = await fetcher(`${ENDPOINTS_PATH.video}/${videoItemId}`);
 	const data = await response.json();
-	const [mappedGalleryItemDetails] = galleryResponseMapper([data]);
+	const [mappedVideoItemDetails] = videoResponseMapper([data]);
 
-	const fourRecentGalleryItemResponse = await fetcher(ENDPOINTS_PATH.gallery);
-	const fourRecentGalleryItems = await fourRecentGalleryItemResponse.json();
-	const mappedFourRecentGalleryItems = galleryResponseMapper(fourRecentGalleryItems);
+	console.log(mappedVideoItemDetails);
+
+	const fourRecentVideoItemResponse = await fetcher(ENDPOINTS_PATH.video);
+	const fourRecentVideoItems = await fourRecentVideoItemResponse.json();
+	const mappedFourRecentVideoItems = videoResponseMapper(fourRecentVideoItems);
 
 	return (
 		<div>
 			<BlurEffectBackground />
 			<Container className="flex">
 				<div className="w-6/12">
-					<CustomLightBox media={mappedGalleryItemDetails.media} />
+					<CustomLightBox media={mappedVideoItemDetails.media} />
 				</div>
 				<div className="w-6/12 px-5">
 					<div className="flex items-center">
 						<div className="flex items-center flex-col justify-center rounded-xl ml-1 bg-[#D8CBB0] text-center w-[50px] text-sm h-[50px] text-[#815600] font-bold">
-							<span>{_date(mappedGalleryItemDetails.createAt).format("D")}</span>
-							<span>{_date(mappedGalleryItemDetails.createAt).format("MMM")}</span>
+							<span>{_date(mappedVideoItemDetails.createAt).format("D")}</span>
+							<span>{_date(mappedVideoItemDetails.createAt).format("MMM")}</span>
 						</div>
-						<h1 className="mr-2 font-bold">{mappedGalleryItemDetails.title}</h1>
+						<h1 className="mr-2 font-bold">{mappedVideoItemDetails.title}</h1>
 					</div>
-					<p className="mt-3 text-justify">{mappedGalleryItemDetails.shortDesc}</p>
+					<p className="mt-3 text-justify">{mappedVideoItemDetails.shortDesc}</p>
 				</div>
 			</Container>
 
 			<Container>
-				<p className="mb-8 mt-32 font-semibold">تصاویر مرتبط</p>
+				<p className="mb-8 mt-32 font-semibold">ویدیو مرتبط</p>
 				<div className="grid grid-cols-4 gap-3 pb-32">
-					{mappedFourRecentGalleryItems.slice(0, 4).map((item, i) => (
+					{mappedFourRecentVideoItems.slice(0, 4).map((item, i) => (
 						<BlogCard
 							height={20}
 							title={item.title}
 							pathSource="gallery"
 							date="8 خرداد"
-							img={item.thumbnail}
+							img={item.poster}
 							id={item.id}
 							key={i}
 						/>
@@ -59,4 +61,4 @@ const GalleryPost = async ({ params }) => {
 	);
 };
 
-export default GalleryPost;
+export default VideoPost;

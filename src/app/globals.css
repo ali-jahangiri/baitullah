@@ -50,3 +50,26 @@ body {
 .audio-payer-package .rhap_time {
 	color: white;
 }
+
+.yarl__container {
+	@apply bg-transparent !important;
+}
+
+.yarl__thumbnails_container {
+	@apply bg-transparent !important;
+}
+
+.yarl__thumbnails_thumbnail {
+	@apply bg-transparent !important;
+}
+
+.yarl__thumbnails_thumbnail img {
+	border-radius: 10px;
+	height: 100% !important;
+	width: 100% !important;
+	object-fit: cover;
+}
+
+.yarl__slide img {
+	border-radius: 10px;
+}

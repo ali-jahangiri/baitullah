@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Inline from "yet-another-react-lightbox/plugins/inline";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
@@ -20,6 +20,7 @@ const CustomLightBox = ({ media }) => {
 	return (
 		<div dir="ltr">
 			<Lightbox
+				thumbnails={{ borderColor: "white", borderRadius: 12 }}
 				slides={media.map(path => ({
 					src: path,
 				}))}

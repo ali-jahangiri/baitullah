@@ -3,6 +3,8 @@ const ENDPOINTS_PATH = {
 	sound: "mosqueSound",
 	campaign: "mosqueEvent",
 	gallery: "mosqueGallery",
+	video: "mosqueVideo",
+	schedule: "mosqueTimetable",
 };
 
 export default ENDPOINTS_PATH;

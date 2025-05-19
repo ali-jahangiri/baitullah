@@ -31,7 +31,7 @@ const RecentArchiveSlider = () => {
 		fetcher(ENDPOINTS_PATH.post)
 			.then(res => res.json())
 			.then(postsResponseMapper)
-			.then(data => setArchivePost([...data, ...data, ...data, ...data]));
+			.then(data => setArchivePost(data));
 	}, []);
 
 	return (
@@ -49,8 +49,7 @@ const RecentArchiveSlider = () => {
 			<div
 				className="w-full h-[18rem] absolute top-[-30px] left-0"
 				style={{
-					background:
-						"linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255, 1) 90%);",
+					background: "linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255, 1) 90%)",
 				}}
 			/>
 			{/* slider and helper text container */}
