@@ -1,6 +1,4 @@
 export default function soundDurationSeparator(second) {
-	console.log(second);
-
 	const minute = Math.floor(second / 60);
 	const secondRemainder = second % 60;
 

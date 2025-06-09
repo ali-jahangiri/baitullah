@@ -25,7 +25,7 @@ const RecentSounds = () => {
 	}, []);
 
 	return (
-		<div className="w-6/12 mx-auto">
+		<div className="w-6/12 mx-auto mt-[13rem] pb-[10rem]">
 			<div className="w-full flex justify-between">
 				<h2 className="text-xl">پادکست مسجد</h2>
 				<Link className="flex items-center text-[#ABB5C6]" href="/sounds">

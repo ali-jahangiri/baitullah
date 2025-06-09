@@ -4,8 +4,6 @@ const baseApiVersion = process.env.BASE_URL_VERSION;
 export default function fetcher(route, method = "GET", body = null) {
 	const url = `${baseApiURL}/v${baseApiVersion}/${route}`;
 
-	console.log(url);
-
 	const headers = {
 		"Content-Type": "application/json",
 	};

@@ -12,11 +12,7 @@ import CustomSlider from "./slider";
 const RecentCampaigns = async () => {
 	const response = await fetcher(ENDPOINTS_PATH.campaign);
 	const data = await response.json();
-	const mappedCampaignsList = [
-		...campaignsResponseMapper(data),
-		...campaignsResponseMapper(data),
-		...campaignsResponseMapper(data),
-	];
+	const mappedCampaignsList = campaignsResponseMapper(data);
 
 	return (
 		<div
@@ -25,7 +21,7 @@ const RecentCampaigns = async () => {
 				backgroundPosition: "center",
 				backgroundRepeat: "repeat",
 			}}
-			className="w-[95%] h-[500px] mx-auto flex items-center rounded-2xl mb-32"
+			className="w-[95%] h-[500px] mx-auto flex items-center rounded-2xl mb-32 mt-32"
 		>
 			<div className="relative ml-32">
 				<Image width={700} height={700} src={BoyImage} className="relative top-20" />

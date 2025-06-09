@@ -22,6 +22,7 @@ const Videos = async () => {
 							title={item.title}
 							pathSource="video"
 							date="8 خرداد"
+							isVideo
 							img={item.poster}
 							id={item.id}
 							key={i}

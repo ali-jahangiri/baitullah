@@ -3,8 +3,8 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-const CampaignCard = ({ id, img, title, desc, showShortDesc }) => (
-	<div dir="rtl" className="flex flex-col shadow-lg rounded-xl bg-white px-5 w-[400px]">
+const CampaignCard = ({ id, img, title, desc, showShortDesc, width }) => (
+	<div dir="rtl" style={{ width }} className={`flex flex-col shadow-lg rounded-xl bg-white px-5`}>
 		<Image
 			width={300}
 			height={300}

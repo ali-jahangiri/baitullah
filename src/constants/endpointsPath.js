@@ -5,6 +5,7 @@ const ENDPOINTS_PATH = {
 	gallery: "mosqueGallery",
 	video: "mosqueVideo",
 	schedule: "mosqueTimetable",
+	banner: "mosqueBanner",
 };
 
 export default ENDPOINTS_PATH;

@@ -17,6 +17,7 @@ const CustomSlider = ({ data }) => {
 		<Slider {...sliderConfig}>
 			{data.map((campaign, i) => (
 				<CampaignCard
+					width={400}
 					title={campaign.title}
 					img={campaign.img}
 					showShortDesc

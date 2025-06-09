@@ -25,7 +25,10 @@ const VideoPost = async ({ params }) => {
 			<BlurEffectBackground />
 			<Container className="flex">
 				<div className="w-6/12">
-					<CustomLightBox media={mappedVideoItemDetails.media} />
+					<CustomLightBox
+						poster={mappedVideoItemDetails.poster}
+						media={[...mappedVideoItemDetails.media, mappedVideoItemDetails.video]}
+					/>
 				</div>
 				<div className="w-6/12 px-5">
 					<div className="flex items-center">
@@ -44,9 +47,10 @@ const VideoPost = async ({ params }) => {
 				<div className="grid grid-cols-4 gap-3 pb-32">
 					{mappedFourRecentVideoItems.slice(0, 4).map((item, i) => (
 						<BlogCard
+							isVideo
 							height={20}
 							title={item.title}
-							pathSource="gallery"
+							pathSource="video"
 							date="8 خرداد"
 							img={item.poster}
 							id={item.id}

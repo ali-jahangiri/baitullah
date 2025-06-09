@@ -4,7 +4,6 @@ import Image from "next/image";
 import Container from "@/src/components/ui/container";
 
 import BlogCard from "@/src/components/common/blogCard";
-import Pagination from "@/src/components/ui/pagination";
 import BlurEffectBackground from "@/src/components/ui/blurEffectBackground";
 import fetcher from "@/src/api/fetcher";
 import ENDPOINTS_PATH from "@/src/constants/endpointsPath";
@@ -66,10 +65,6 @@ const Archive = async () => {
 						/>
 					</div>
 				))}
-			</div>
-
-			<div className="mt-5 flex justify-center h-52">
-				<Pagination total={23} current={5} />
 			</div>
 		</Container>
 	);

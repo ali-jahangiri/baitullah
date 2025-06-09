@@ -24,7 +24,7 @@ const CampaignActionBox = ({ price, actionLabel, startDate, endDate }) => {
 					</div>
 					<div className="h-12 my-auto w-1 bg-[#EDEDED]" />
 					<div className="flex items-center w-full justify-center">
-						<WalkingIcon className="w-8 h-8 fill-gray-400" />
+						<Walking className="w-8 h-8 fill-gray-400" />
 						<div className="mr-5">
 							<p className="text-[#8B8B8B] text-sm mb-2">تاریخ خروج</p>
 							<span className="text-[#3D3C45] text-lg">{endDate}</span>

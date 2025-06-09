@@ -30,7 +30,7 @@ const Schedule = () => {
 	}, []);
 
 	return (
-		<div className="">
+		<div className="mt-[15rem]">
 			<Container>
 				<p className="text-lg font-bold">برنامه سین بیت الله</p>
 			</Container>

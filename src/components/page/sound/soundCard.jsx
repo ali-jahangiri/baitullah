@@ -1,16 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 
-import FixedAudioPlayer from "./fixedAudioPlayer";
 import SoundWaveImage from "@/src/assets/images/sound-wave.png";
 import soundDurationSeparator from "@/src/utils/soundDurationSeparator";
 import { Play } from "@/src/assets/icons";
 
-const SoundCard = ({ id, duration, title, img, onSelect }) => {
-	const [wasPlayerOpen, setWasPlayerOpen] = useState(false);
-
+const SoundCard = ({ duration, title, img, onSelect }) => {
 	return (
 		<div className="p-4 rounded-3xl bg-white">
 			{img && (
