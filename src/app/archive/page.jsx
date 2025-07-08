@@ -52,7 +52,7 @@ const Archive = async () => {
 				</div>
 			</div>
 
-			<div className="grid grid-cols-4 gap-4 mt-10">
+			<div className="grid grid-cols-4 gap-4 mt-28">
 				{mappedList.map((post, i) => (
 					<div className="">
 						<BlogCard

@@ -90,7 +90,7 @@ const CATEGORIES_ITEMS = [
 
 const Categories = ({ activeItemId, setActiveItemId }) => {
 	return (
-		<div className="w-8/12 mx-auto flex items-center justify-between mb-40">
+		<div className="w-8/12 mx-auto flex items-center justify-between mb-24">
 			{CATEGORIES_ITEMS.map((item, i) => (
 				<div
 					className={`${

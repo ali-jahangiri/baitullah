@@ -1,15 +1,15 @@
 export const NAVIGATION_ITEMS = [
 	{
 		label: "رویداد ها",
-		path: "events",
+		path: "campaign",
 	},
 	{
 		label: "بسیج خواهران",
-		path: "w-basig",
+		path: "archive?type=1",
 	},
 	{
 		label: "بسیج برادران",
-		path: "m-basig",
+		path: "archive?type=2",
 	},
 	{
 		label: "اخبار و مقالات",
@@ -17,7 +17,7 @@ export const NAVIGATION_ITEMS = [
 	},
 	{
 		label: "صندوق خیریه",
-		path: "charity-fund",
+		path: "archive?type=3",
 	},
 ];
 
