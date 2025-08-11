@@ -28,6 +28,7 @@ const SoundCardList = ({ soundList }) => {
 					type={SOUND_TYPE_ENUMS[currentlyOpenSoundItem.type]}
 					audioSrc={currentlyOpenSoundItem.source}
 					img={currentlyOpenSoundItem.img}
+					onClose={() => setCurrentlyOpenSoundItem(null)}
 				/>
 			)}
 		</>

@@ -4,7 +4,7 @@ import React from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 
-const FixedAudioPlayer = ({ title, type, audioSrc, img }) => {
+const FixedAudioPlayer = ({ title, type, audioSrc, img, onClose }) => {
 	return (
 		<PortalContainer>
 			<div className="bg-[#222222] h-[100px] flex items-center fixed w-full bottom-0 left-0 transition-all duration-300 ease-in-out z-[9999]">
@@ -38,7 +38,14 @@ const FixedAudioPlayer = ({ title, type, audioSrc, img }) => {
 				</div>
 
 				{/* volume */}
-				<div></div>
+				<div>
+					<button
+						className="text-white cursor-pointer ml-8 rounded-xl p-3 px-5 bg-gray-700"
+						onClick={onClose}
+					>
+						بستن
+					</button>
+				</div>
 			</div>
 		</PortalContainer>
 	);

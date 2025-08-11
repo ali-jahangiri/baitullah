@@ -63,7 +63,7 @@ const RecentArchiveSlider = () => {
 					</Link>
 				</div>
 
-				<div dir="ltr" className="-mr-36">
+				<div dir="ltr" className="-mr-36 max-h-[33rem] overflow-y-hidden">
 					<Slider {...sliderConfig}>
 						{archivePost.map((post, i) => (
 							<div dir="rtl" className="bg-white rounded-xl p-2 pb-5 text-right" key={i}>

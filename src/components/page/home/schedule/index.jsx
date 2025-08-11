@@ -32,7 +32,7 @@ const Schedule = () => {
 	return (
 		<div className="mt-[15rem]">
 			<Container>
-				<p className="text-lg font-bold">برنامه سین بیت الله</p>
+				<p className="text-lg font-bold">برنامه روزانه مسجد صاحب الزمان عج</p>
 			</Container>
 			<div
 				style={{
@@ -49,7 +49,7 @@ const Schedule = () => {
 						امروز {_date().format("ddd")}
 					</div>
 					<p className="tracking-wider font-bold text-2xl my-2">
-						{_date().format("YY/MM/DD")}
+						{_date().format("YYYY/MM/DD")}
 					</p>
 					<p className="tracking-wider font-bold text-2xl">{currentTime}</p>
 				</div>

@@ -48,15 +48,9 @@ const Footer = () => {
 
 						<div className="flex items-center">
 							<p>باز بودن درب مسجد:</p>
-							<p className="text-gray-400 mr-3">هر روز از ساعت 5 صبح تا 11 شب</p>
-						</div>
-						<div className="flex mt-7">
-							<p>اقامه نماز جماعت:</p>
-							<div className="flex flex-col space-y-3 mr-3">
-								<p className="text-gray-400">صبح ۵:۳۰</p>
-								<p className="text-gray-400">ظهر و عصر ۱۲:۱۵</p>
-								<p className="text-gray-400">مغرب و عشاء: 18:30</p>
-							</div>
+							<p className="text-gray-400 mr-3">
+								نیم ساعت قبل از اذان تا ۱ ساعت بعد از اقامه نماز
+							</p>
 						</div>
 					</div>
 
@@ -68,15 +62,15 @@ const Footer = () => {
 						<div className="flex flex-col">
 							<p>آدرس:</p>
 							<span className="text-gray-400 mt-1 mb-4">
-								تهران، خیابان انقلاب، کوچه مسجد، پلاک 12
+								سی متری نیروی هوایی، خ شورا، مسیل جاجرود، مسجد صاحب الزمان عج
 							</span>
 							<p>تلفن:</p>
 							<a href="tel:021-77477372" className="text-gray-400 mt-1 mb-4">
-								021-12345678
+								021-77477372
 							</a>
 							<p>ایمیل:</p>
-							<a href="mailto:mr.abedini@gmail.com" className="text-gray-400 mt-1 mb-4">
-								info@masjedexample.com
+							<a href="mailto:info@beytollah.com" className="text-gray-400 mt-1 mb-4">
+								info@beytollah.com
 							</a>
 						</div>
 					</div>

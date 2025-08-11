@@ -11,7 +11,7 @@ const ExampleItemCard = ({ title, presenter, id, image }) => {
 			>
 				<div
 					style={{
-						background: "linear-gradient(1deg, #0000008a, transparent)",
+						background: "linear-gradient(1deg, black, transparent)",
 					}}
 					className="absolute bottom-0 left-0 w-full flex py-5 px-5 items-center justify-between text-white"
 				>

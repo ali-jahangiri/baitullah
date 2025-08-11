@@ -17,10 +17,10 @@ const BlogCard = ({ img, date, title, id, pathSource, isVideo, height = 30 }) =>
 				</div>
 			</div>
 		)}
-		<div className="flex items-center absolute bottom-5 px-6">
+		<div className="flex items-center absolute bottom-0 px-6 bg-black/50 w-full py-3">
 			<div className="rounded-lg text-sm text-white bg-white/5 ml-1 text-center p-1">{date}</div>
 			<p className="text-sm text-white mx-2">{title}</p>
-			<AngleCircleLeft className="w-6 h-6 fill-gray-300" />
+			<AngleCircleLeft className="w-6 h-6 fill-gray-300 mr-auto" />
 		</div>
 	</Link>
 );
